@@ -1,0 +1,1 @@
+RELEVANT_KEYWORDS = ["esg", "report", "investor", "sustainability", "code", "conduct", "cod"]

@@ -17,6 +17,7 @@ def google_search(query):
                 print(s+" : seems to be very relevant")
             else:
                 print(s)
+    return relevant_web
 
 
 
@@ -27,4 +28,4 @@ if __name__ == "__main__":
     
     args = argparser.parse_args()
     print("running a google search on your supplier: "+ args.supplier)
-    google_search(args.supplier)
+    _ = google_search(args.supplier)
