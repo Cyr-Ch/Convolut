@@ -78,11 +78,11 @@ async function writeFileProfile() {
   profileDocumentUrl.hash = "";
   document.getElementById(
     "labelWriteStatusFile"
-  ).textContent = `Writing [${name}] to "https://konvolut.solidcommunity.net/private/file.html"`;
+  ).textContent = `Writing [${name}] to "https://teamvoit.solidcommunity.net/private/file.html"`;
   document.getElementById("labelWriteStatusFile").setAttribute("role", "alert");
   try {
   const savedFile = await saveFileInContainer(  
-    "https://konvolut.solidcommunity.net/private/",                              // URL for the file.
+    "https://teamvoit.solidcommunity.net//private/",                              // URL for the file.
     name,                                       // File
     { contentType: name.type, fetch: session.fetch }    // mimetype if known, fetch from the authenticated session
   );
