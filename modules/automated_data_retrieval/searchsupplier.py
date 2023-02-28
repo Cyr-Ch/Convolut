@@ -1,5 +1,7 @@
 import argparse
 from googlesearch import search
+from downloadfiles import download_pdfs
+from classifyfiles import filter_content
 
 
 def google_search(query):
@@ -13,7 +15,7 @@ def google_search(query):
     else:
         print("The following websites were found:")
         for s in relevant_web:
-            if query.lower()+"." in s:
+            if query.lower() in s:
                 print(s+" : seems to be very relevant")
             else:
                 print(s)
@@ -28,4 +30,12 @@ if __name__ == "__main__":
     
     args = argparser.parse_args()
     print("running a google search on your supplier: "+ args.supplier)
-    _ = google_search(args.supplier)
+    relevant_web = google_search(args.supplier)
+
+    print("Downloading data from relevant websites")
+    #for web in relevant_web:
+    #    download_pdfs(web)
+
+    for web in relevant_web:
+        #print(web)
+        filter_content(web)
